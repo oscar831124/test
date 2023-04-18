@@ -8,6 +8,8 @@ Created on Fri Jan 13 16:31:41 2023
 # USAGE
 # python image_diff.py --first images/original_01.png --second images/modified_01.png
 
+
+
 # import the necessary packages
 from skimage.metrics import structural_similarity
 import argparse
@@ -26,7 +28,8 @@ imageA2 = cv2.imread(args["first"])
 imageB2 = cv2.imread(args["second"])
 
 #crop the images
-imageA = imageA2[390:633,883:1376] #[y1:y2,x1:x2]
+#[y1:y2,x1:x2]
+imageA = imageA2[390:633,883:1376]
 imageB = imageB2[390:633,883:1376]
 
 # convert the images to grayscale
